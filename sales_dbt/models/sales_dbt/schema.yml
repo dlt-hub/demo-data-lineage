@@ -1,0 +1,7 @@
+
+version: 2
+
+models:
+  - name: fact_sales
+    description: "A starter dbt model"
+

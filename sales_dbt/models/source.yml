@@ -1,0 +1,22 @@
+version: 2
+
+# The source lets the user define the data currently stored in dwh.
+# "- name" is the what dbt uses to refrence the source in the models.
+# "schema" is interchangeable with the BigQuery concept dataset.
+# "database" is interchangeable with the BigQuery concept of project.
+#  https://docs.getdbt.com/docs/build/sources
+
+sources:
+  - name: store
+    schema: "sales_store"
+    tables:
+      - name: sales_info
+      - name: _dlt_loads
+      - name: load_info__tables__columns
+
+  - name: shopify
+    schema: "sales_shopify"
+    tables:
+      - name: sales_info
+      - name: _dlt_loads
+      - name: load_info__tables__columns
